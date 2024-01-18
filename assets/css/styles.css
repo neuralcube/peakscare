@@ -1,0 +1,73 @@
+.feature-icon {
+  width: 4rem;
+  height: 4rem;
+  border-radius: 0.75rem;
+}
+
+.icon-square {
+  width: 3rem;
+  height: 3rem;
+  border-radius: 0.75rem;
+}
+
+.text-shadow-1 {
+  text-shadow: 0 0.125rem 0.25rem rgba(0, 0, 0, 0.25);
+}
+
+.text-shadow-2 {
+  text-shadow: 0 0.25rem 0.5rem rgba(0, 0, 0, 0.25);
+}
+
+.text-shadow-3 {
+  text-shadow: 0 0.5rem 1.5rem rgba(0, 0, 0, 0.25);
+}
+
+.feature-icon-small {
+  width: 3rem;
+  height: 3rem;
+}
+
+/* Parallax */
+#welcome-parallax {
+  background-image: url("/assets/img/service.jpg");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: top left;
+  background-attachment: fixed;
+  height: 50vh;
+  position: relative;
+}
+
+#welcome-parallax .overlay {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.3);
+  z-index: 1; /* Ensure the overlay is on top of the image */
+}
+
+#welcome-parallax.about {
+  background-image: url("/assets/img/team.jpg");
+  background-position: bottom;
+}
+
+#welcome-parallax.contact {
+  background-image: url("/assets/img/contact worker.jpg");
+  background-position: top center;
+}
+
+@media screen and (max-width: 767px) {
+  #welcome-parallax {
+    height: 40vh;
+    /* background-size: cover; */
+    background-position: top center;
+  }
+  #welcome-parallax.about {
+    background-image: url("/assets/img/team.jpg");
+    background-position: center;
+    height: 30vh;
+  }
+}
